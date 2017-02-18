@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
+/*
 func main() {
 	fmt.Println(BreakingTheRecords())
 }
+*/
 
 func BreakingTheRecords() (int, int) {
 	// init input data
