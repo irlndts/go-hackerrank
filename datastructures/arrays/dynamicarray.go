@@ -2,6 +2,7 @@ package main
 
 // Solution for https://www.hackerrank.com/challenges/dynamic-array
 
+/*
 import "fmt"
 
 func main() {
@@ -27,3 +28,4 @@ func main() {
 		}
 	}
 }
+*/
