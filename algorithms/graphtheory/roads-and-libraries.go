@@ -10,6 +10,7 @@ type Node struct {
 	checked bool
 }
 
+/*
 func main() {
 	var Q int
 	fmt.Scan(&Q)
@@ -17,21 +18,23 @@ func main() {
 		fmt.Println(RoadsAndLibraries())
 	}
 }
+*/
 
-func DFS(nodes *[]Node, j, i, c int) {
-	if !(*nodes)[i].checked || (*nodes)[i].counter > c {
+func DFS(nodes []Node, j, i, c int) []Node {
+	if !nodes[i].checked {
 
-		if !(*nodes)[i].checked {
-			(*nodes)[j].cost++
+		if !nodes[i].checked {
+			nodes[j].cost++
 		}
 
-		(*nodes)[i].checked = true
-		(*nodes)[i].counter = c
+		nodes[i].checked = true
+		nodes[i].counter = c
 
-		for _, v := range (*nodes)[i].edges {
-			DFS(nodes, j, v, (*nodes)[i].counter+1)
+		for _, v := range nodes[i].edges {
+			nodes = DFS(nodes, j, v, nodes[i].counter+1)
 		}
 	}
+	return nodes
 }
 
 func RoadsAndLibraries() int {
@@ -57,7 +60,7 @@ func RoadsAndLibraries() int {
 
 	for i := 0; i < N; i++ {
 		if !nodes[i].checked {
-			DFS(&nodes, i, i, 0)
+			nodes = DFS(nodes, i, i, 0)
 		}
 	}
 
