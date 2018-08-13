@@ -1,5 +1,4 @@
 # go-hackerrank
 my solutions for hackerrank.com
 
-follow me! 
-https://www.hackerrank.com/irlndts
+My page there: https://www.hackerrank.com/irlndts
