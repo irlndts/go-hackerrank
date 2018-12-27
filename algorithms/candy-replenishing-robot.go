@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
+/*
 func main() {
 	var N, T int
 	fmt.Scanf("%v %v", &N, &T)
@@ -23,3 +20,4 @@ func main() {
 	}
 	fmt.Println(result)
 }
+*/
